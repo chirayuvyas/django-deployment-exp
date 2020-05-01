@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends "basic_app\base.html"%}
+
+{% block body_block %}
+    <h1>WELCOME TO INDEX</h1>
+    <!-- <h2>This is index.html showing!</h2> -->
+    <h1>{{ text|upper }}</h1>    <!-- This is built-in template filter -->
+    <h1>{{ number|add:99 }}</h1> <!-- This is built-in template filter -->
+    <h1>{{ text|cut:'hello'}}</h1>      <!-- This is example of custom template filter -->
+{% endblock %}
+
+
+<!-- Template Filter: Built-in
+{{ text|upper }}
+here we are getting the text data from the views (index() method, we have defined the context_dict,
+the context_dict is being pass while displaying the index.html.
+
+We have added the template filter in this text value, before displaying data on index.html page,
+we are converting value in UPPER case using the template filter 'upper'.
+
+{{ number|add:99 }}
+here we are adding the 99 in the value of number.
+ -->

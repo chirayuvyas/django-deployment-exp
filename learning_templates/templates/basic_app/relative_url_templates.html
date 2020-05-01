@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>WELCOME TO RELATIVE URL TEMPLATES</h1>
+    <!-- <a href="basic_app/other.html">THE OTHER PAGE</a> -->
+    <a href="{% url 'basic_app:other' %}">THE OTHER PAGE</a><br>
+    <a href="{% url 'admin:index' %}">ADMIN PAGE</a>
+    <a href="{% url 'index' %}"></a>
+  </body>
+</html>
+
+<!-- <a href="basic_app/other.html">THE OTHER PAGE</a>
+Actually, we always do code to access the page, now we will not use this code and
+instead we will use relative path so we don't have the path here
+and that is relative to the application so django can find it
+
+Relative pages:
+<a href="{% url 'basic_app:other' %}"></a>
+basic_app = this is the app_name which we defined in the basic_app/urls.py
+other = name of the view which we have defined in the basic_app/urls.py in urlpatterns
+
+ADMIN PAGE:
+<a href="{% url 'admin:index' %}">ADMIN PAGE</a>
+This is a relative url for Admin page, we don't need to define the view index for Admin, it already
+present in Settings.py file INSTALLED_APPS section then we can fine admin app - 'django.contrib.admin',
+
+Some time we need to do the migration to access the Admin page so use the below command
+python manage.py migrate
+It will run the migration for degault app.
+
+INDEX(HOME)PAGE-
+<a href="{% url 'index' %}"></a>
+this will call the index view and url added in learning_templates/urls.py
+-->
